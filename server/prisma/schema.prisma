@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model entities {
+  id           Int    @id @default(autoincrement())
+  name         String @default("Entity") @db.VarChar(255)
+  x_coordinate Int
+  y_coordinate Int
+  label        String @db.VarChar(255)
+}
