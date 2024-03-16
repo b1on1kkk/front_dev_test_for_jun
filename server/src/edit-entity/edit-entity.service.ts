@@ -9,10 +9,8 @@ export class EditEntityService {
   constructor(private readonly prisma: PrismaService) {}
 
   async change_all(id: number, body: EditEntityDTO) {
-    console.log(body);
-
     try {
-      await this.prisma.entities.update({
+      await this.prisma.entity.update({
         where: { id: id },
         data: {
           name: body.name,

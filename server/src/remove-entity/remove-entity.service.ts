@@ -8,7 +8,7 @@ export class RemoveEntityService {
 
   async remove_entity(id: number) {
     try {
-      await this.prisma.entities.delete({
+      await this.prisma.entity.delete({
         where: { id: +id },
       });
 

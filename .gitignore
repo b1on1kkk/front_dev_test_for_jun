@@ -2,3 +2,5 @@ node_modules
 dist
 .env
 README.md
+.git
+.gitignore

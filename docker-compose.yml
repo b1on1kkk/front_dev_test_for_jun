@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  client:
+    build: ./client
+    container_name: react-ui
+    ports:
+      - "5173:5173"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - server
+    networks:
+      - test-network
+
+  server:
+    build: "./server"
+    container_name: nest-api
+    environment:
+      - PORT=3000
+      - DATABASE_URL=mysql://root:wpAbfBpMGVwbtuYoKGykOAhgaudnMHIA@monorail.proxy.rlwy.net:30708/entities
+    ports:
+      - "3000:3000"
+    networks:
+      - test-network
+
+networks:
+  test-network:
+    driver: bridge

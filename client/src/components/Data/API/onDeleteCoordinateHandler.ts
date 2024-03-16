@@ -14,6 +14,8 @@ export async function onDeleteCoordinateHandler(
     await deleteCoordinate(id);
     fetchData(fetchDispatch, "/get-entity/all_entities");
   } catch (error) {
+    console.log(error);
+
     fetchDispatch({
       type: FetchingActionKind.SET_ERROR,
       payload: error as AxiosError

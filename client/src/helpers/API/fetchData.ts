@@ -16,6 +16,7 @@ export async function fetchData(
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     const response = await axios.get(`${PREFIX}${query}`);
+
     stateSetter({
       type: FetchingActionKind.SET_DATA,
       payload: response.data

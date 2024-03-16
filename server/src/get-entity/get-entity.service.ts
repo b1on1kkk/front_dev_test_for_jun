@@ -13,7 +13,7 @@ export class GetEntityService {
 
   async entity_filtered(x1: number, y1: number, x2: number, y2: number) {
     try {
-      const entities = await this.prisma.entities.findMany({
+      const entities = await this.prisma.entity.findMany({
         where: {
           AND: [
             {
@@ -38,7 +38,7 @@ export class GetEntityService {
 
   async all_entities() {
     try {
-      const response = await this.prisma.entities.findMany();
+      const response = await this.prisma.entity.findMany();
 
       return this.getReponseHandler.Success(response);
     } catch (error) {
@@ -48,7 +48,7 @@ export class GetEntityService {
 
   async entity(id: number) {
     try {
-      const response = await this.prisma.entities.findUnique({
+      const response = await this.prisma.entity.findUnique({
         where: { id: id },
       });
 
@@ -62,25 +62,3 @@ export class GetEntityService {
     }
   }
 }
-
-// // First, define a query function in your service layer or wherever you handle database operations
-// async function getEntitiesWithinRectangle(x1, y1, x2, y2) {
-//     const entities = await prisma.entities.findMany({
-//       where: {
-//         AND: [
-//           { x_coordinate: { gte: Math.min(x1, x2) } }, // Greater than or equal to min x-coordinate
-//           { x_coordinate: { lte: Math.max(x1, x2) } }, // Less than or equal to max x-coordinate
-//           { y_coordinate: { gte: Math.min(y1, y2) } }, // Greater than or equal to min y-coordinate
-//           { y_coordinate: { lte: Math.max(y1, y2) } } // Less than or equal to max y-coordinate
-//         ]
-//       },
-//       select: {
-//         label: true
-//       }
-//     });
-//     return entities.map(entity => entity.label);
-//   }
-
-//   // Then, you can use this function to get the labels of entities within a given rectangle
-//   const labels = await getEntitiesWithinRectangle(0, -1, 8, 15);
-//   console.log(labels); // This will output the labels of entities within the specified rectangle

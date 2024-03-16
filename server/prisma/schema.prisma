@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model entities {
+model entity {
   id           Int    @id @default(autoincrement())
   name         String @default("Entity") @db.VarChar(255)
   x_coordinate Int

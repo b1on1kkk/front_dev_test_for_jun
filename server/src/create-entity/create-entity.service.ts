@@ -10,7 +10,7 @@ export class CreateEntityService {
 
   async create_entity(body: CreateEntityDTO) {
     try {
-      await this.prisma.entities.create({
+      await this.prisma.entity.create({
         data: {
           name: body.name,
           x_coordinate: body.x_coordinate,

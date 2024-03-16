@@ -24,6 +24,8 @@ export default function Data() {
     fetchData(fetchDispatch, "/get-entity/all_entities");
   }, []);
 
+  console.log(data);
+
   if (loading) {
     return (
       <div className="flex items-center justify-center flex-1">
