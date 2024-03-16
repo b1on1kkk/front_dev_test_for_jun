@@ -2,7 +2,7 @@ import { AxiosError } from "axios";
 
 import { FetchingActionKind } from "./enum";
 
-import { DatasetResponse } from "../../Data/types/interface";
+import type { DatasetResponse } from "../../Data/types/interface";
 
 export type InputType = "text" | "number";
 

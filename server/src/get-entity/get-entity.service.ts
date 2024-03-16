@@ -16,24 +16,21 @@ export class GetEntityService {
       const entities = await this.prisma.entities.findMany({
         where: {
           AND: [
-            { x_coordinate: { gte: Math.min(x1, x2) } },
-            { x_coordinate: { lte: Math.max(x1, x2) } },
-            { y_coordinate: { gte: Math.min(y1, y2) } },
-            { y_coordinate: { lte: Math.max(y1, y2) } },
+            {
+              x_coordinate: {
+                gte: x1,
+                lte: x2,
+              },
+              y_coordinate: {
+                gte: y1,
+                lte: y2,
+              },
+            },
           ],
-        },
-        select: {
-          label: true,
         },
       });
 
-      const uniqueLabelsSet = new Set();
-
-      entities.forEach((entity) =>
-        entity.label.split(',').forEach((e) => uniqueLabelsSet.add(e)),
-      );
-
-      return this.getReponseHandler.Success(Array.from(uniqueLabelsSet));
+      return this.getReponseHandler.Success(entities);
     } catch (error) {
       return this.getReponseHandler.Error();
     }

@@ -1,25 +1,45 @@
+import { useReducer, useState } from "react";
+
 import { CirclePlus } from "lucide-react";
 import NewCoordinatesCard from "../NewCoordinatesCard/NewCoordinatesCard";
 
-import { INITIAL_INPUTS } from "../../constants/constants";
+import { onSubmitNewCoordinates } from "../../API/onSubmitNewCoordinates";
+
+import { inputReducer } from "../../utils/inputReducer";
 
 import { InputActionKind } from "../../types/enum";
 import type { TNewCoodrinatesForm } from "../../types/interface";
 
+import {
+  INITIALI_INPUT_STATE,
+  INITIAL_INPUTS
+} from "../../constants/constants";
+
 //////////////////////////////////////////////////////////////////////////////////
 
 export default function NewCoodrinatesForm({
-  newCoordinates,
-  setNewCoordinates,
-  submitHander,
-  newCoordinateState,
-  newCoordinateDispatch
+  fetchDispatch
 }: TNewCoodrinatesForm) {
+  const [newCoordinates, setNewCoordinates] = useState<boolean>(false);
+
+  const [newCoordinateState, newCoordinateDispatch] = useReducer(
+    inputReducer,
+    INITIALI_INPUT_STATE
+  );
+
   return (
     <>
       {newCoordinates ? (
         <div className="h-[300px] shadow-md border-[1px] rounded-md p-3">
-          <form onSubmit={submitHander} className="flex flex-col gap-3">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+
+              onSubmitNewCoordinates(newCoordinateState, fetchDispatch);
+              setNewCoordinates(false);
+            }}
+            className="flex flex-col gap-3"
+          >
             {INITIAL_INPUTS.map((input) => {
               return (
                 <NewCoordinatesCard

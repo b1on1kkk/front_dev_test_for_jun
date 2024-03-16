@@ -1,9 +1,9 @@
 import axios, { AxiosError } from "axios";
 
-import { PREFIX } from "../../../helpers/API/prefix";
+import { PREFIX } from "./prefix";
 
-import { FetchingActionKind } from "../types/enum";
-import { FetchingAction } from "../types/type";
+import { FetchingActionKind } from "../../components/SingleEntity/types/enum";
+import { FetchingAction } from "../../components/SingleEntity/types/type";
 
 export async function fetchData(
   stateSetter: (value: FetchingAction) => void,

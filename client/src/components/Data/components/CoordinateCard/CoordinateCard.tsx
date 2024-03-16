@@ -1,16 +1,10 @@
-import { X } from "lucide-react";
-
-import type { TDataset } from "../../types/interface";
-
 import { Link } from "react-router-dom";
 
-export default function CoordinateCard({
-  obj,
-  onDelete
-}: {
-  obj: TDataset;
-  onDelete: () => void;
-}) {
+import { X } from "lucide-react";
+
+import type { TCoordinateCard } from "../../types/interface";
+
+export default function CoordinateCard({ obj, onDelete }: TCoordinateCard) {
   return (
     <div
       className="h-[300px] shadow-md border-[1px] rounded-md p-3"
@@ -18,8 +12,7 @@ export default function CoordinateCard({
     >
       <div className="mb-5 flex items-center">
         <p className="flex-1">
-          {obj.name}
-          {obj.id}
+          {obj.name} : {obj.id}
         </p>
 
         <button

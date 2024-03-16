@@ -1,3 +1,4 @@
+import { FetchingAction } from "../../SingleEntity/types/type";
 import { InputActionKind } from "./enum";
 
 export interface TDataset {
@@ -35,9 +36,16 @@ export interface TInitial_inputs {
 }
 
 export interface TNewCoodrinatesForm {
-  newCoordinates: boolean;
-  newCoordinateState: InputState;
-  setNewCoordinates: (c: boolean) => void;
-  submitHander: (e: React.FormEvent<HTMLFormElement>) => void;
-  newCoordinateDispatch: (c: InputAction) => void;
+  fetchDispatch: (c: FetchingAction) => void;
+}
+
+export interface TCoordinateCard {
+  obj: TDataset;
+  onDelete: () => void;
+}
+
+export interface TNewCoordinatesCard {
+  input: TInitial_inputs;
+  value: string | number;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

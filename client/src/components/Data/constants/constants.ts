@@ -1,4 +1,5 @@
 import { InputActionKind } from "../types/enum";
+
 import type { TInitial_inputs } from "../types/interface";
 
 export const INITIAL_INPUTS: TInitial_inputs[] = [

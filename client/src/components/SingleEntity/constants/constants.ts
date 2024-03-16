@@ -1,5 +1,6 @@
 import { ToChange } from "../types/enum";
-import { FetchingState, TInputs } from "../types/interface";
+
+import type { FetchingState, TInputs } from "../types/interface";
 
 export const INPUTS: TInputs[] = [
   {

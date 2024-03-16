@@ -1,19 +1,22 @@
-import { TInputs } from "../../types/interface";
+import { useDispatch, useSelector } from "react-redux";
 
-interface TInput {
-  input: TInputs;
-  inputValue: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur: () => void;
-}
+import { AppDispatch, RootState } from "../../../../store/store";
+import { inputsActions } from "../../../../store/slices/inputs.slice";
 
-export default function Input({ input, inputValue, onChange, onBlur }: TInput) {
+import type { TInput } from "../../types/interface";
+
+export default function Input({ input, onBlur }: TInput) {
+  const dispatch = useDispatch<AppDispatch>();
+  const inputValue = useSelector(
+    (state: RootState) => state.inputs.new_input_value
+  );
+
   return (
     <input
       type={input.type}
       placeholder={input.placeholder}
       className="bg-inherit focus:outline-none w-full"
-      onChange={onChange}
+      onChange={(e) => dispatch(inputsActions.setNewInputValue(e.target.value))}
       value={inputValue}
       onBlur={onBlur}
     />
