@@ -23,7 +23,9 @@ Backend: Nest JS (TypeScript), PrismaORM (just easier to write queries), MySQL,
 ## Result
 
 When I finish my projects, I thought as end user: would it be convenient for me to build/run the application myself to see how it works? Of course not, therefore I've prepared two ways how can you see the result of my work.
+
 First variant - just visit [web-page](https://frontdevtestforjun.netlify.app/) and see result.
+
 Second variant - clone this repo, enter command below and build project localy on you machine. 
 WARNING: THIS SOLUTION WORKS ONLY AND ONLY WHEN YOU HAVE INSTALLED DOCKER ENGINE ON YOUR MACHINE, IF YOU DON'T WANT SPEND TOO MUCH TIME TO INSTALL/SET IT UP - JUST CLICK THE LINK ABOVE
 ```cmd
