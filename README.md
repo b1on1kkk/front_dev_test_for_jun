@@ -46,9 +46,8 @@ Get single entity by id
   https://front-dev-test-b1on1kkk-api.up.railway.app/create-entity
 ```
 > [!CAUTION]
-> Body:
 > ```javascript
->  data: {
+>  body: {
 >    name: string,
 >    x_coordinate: number,
 >    y_coordinate: number,
