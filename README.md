@@ -25,7 +25,7 @@ Backend: Nest JS (TypeScript), PrismaORM (just easier to write queries), MySQL,
 
 ##API
 
-# GET
+### GET
 
 Get list of ALL entities
 ```cmd
