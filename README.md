@@ -28,7 +28,7 @@ First variant - just visit [web-page](https://frontdevtestforjun.netlify.app/) a
 
 Second variant - clone this repo, enter command below and build project localy on you machine. 
 
-<p style='color:red'>WARNING: THIS SOLUTION WORKS ONLY AND ONLY WHEN YOU HAVE INSTALLED DOCKER ENGINE ON YOUR MACHINE, IF YOU DON'T WANT SPEND TOO MUCH TIME TO INSTALL/SET IT UP - JUST CLICK THE LINK ABOVE.</p>
+<font color="red">WARNING: THIS SOLUTION WORKS ONLY AND ONLY WHEN YOU HAVE INSTALLED DOCKER ENGINE ON YOUR MACHINE, IF YOU DON'T WANT SPEND TOO MUCH TIME TO INSTALL/SET IT UP - JUST CLICK THE LINK ABOVE.</font>
 
 ```cmd
   docker-compose up -d
