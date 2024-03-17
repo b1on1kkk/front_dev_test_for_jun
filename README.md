@@ -52,7 +52,7 @@ Create brand new entity
 >    name: string,
 >    x_coordinate: number,
 >    y_coordinate: number,
->    label: string
+>    label: string (each label divide by comma)
 >  };
 > ```
 
@@ -67,7 +67,7 @@ Edit exist entity by id
 >    name: string,
 >    x_coordinate: number,
 >    y_coordinate: number,
->    label: string
+>    label: string (each label divide by comma)
 >  };
 > ```
 
