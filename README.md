@@ -42,6 +42,7 @@ Get single entity by id
 ```
 
 ### POST
+Create brand new entity
 ```cmd
   https://front-dev-test-b1on1kkk-api.up.railway.app/create-entity
 ```
@@ -55,7 +56,26 @@ Get single entity by id
 >  };
 > ```
 
+### PUT
+Edit exist entity by id
+```cmd
+  https://front-dev-test-b1on1kkk-api.up.railway.app/edit-entity/change_all/:[your_id]
+```
+> [!CAUTION]
+> ```javascript
+>  body: {
+>    name: string,
+>    x_coordinate: number,
+>    y_coordinate: number,
+>    label: string
+>  };
+> ```
 
+### DELETE
+Delete exist entity by id
+```cmd
+  https://front-dev-test-b1on1kkk-api.up.railway.app/remove-entity/:[your_id]
+```
 
 ## Result
 
