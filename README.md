@@ -11,7 +11,9 @@ Firstly, I hope that I understood all tasks correctly and completed them accordi
 
 Secondly, is it ok if I used Prisma in this project? Hope this is not a big deal, if it is - I ready to redo the task
 
-Thirdly, in requirements you've sayed that state manager should be Redux. I implemented it, but have one quesiton: is it truly necessary? If data fetching occurs within a single component - in this component you use it, you don't bother about sharing it with other components. I think that it is overhead to use Redux in this small test task. Nevertheless, it is the best way to see how candidate can deal with it :)
+> [!NOTE]
+> 
+> Thirdly, in requirements you've sayed that state manager should be Redux. I implemented it, but have one quesiton: is it truly necessary? If data fetching occurs within a single component - in this component you use it, you don't bother about sharing it with other > components. I think that it is overhead to use Redux in this small test task. Nevertheless, it is the best way to see how candidate can deal with it :)
 
 ## Stack
 
@@ -30,7 +32,7 @@ Second variant - clone this repo, enter command below and build project localy o
 
 > [!IMPORTANT]
 >
-> WARNING: THIS SOLUTION WORKS ONLY AND ONLY WHEN YOU HAVE INSTALLED DOCKER ENGINE ON YOUR MACHINE, IF YOU DON'T WANT SPEND TOO MUCH TIME TO INSTALL/SET IT UP - JUST CLICK THE LINK ABOVE.
+> This solution works only and only when you have installed Docker engine on you machine, If you don't want to spent too much time to install/set it up - just click the link above.
 
 ```cmd
   docker-compose up -d
