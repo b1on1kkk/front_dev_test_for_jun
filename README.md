@@ -26,16 +26,36 @@ Backend: Nest JS (TypeScript), PrismaORM (just easier to write queries), MySQL,
 ##API
 
 ### GET
-
 Get list of ALL entities
 ```cmd
-  https://front-dev-test-b1on1kkk-api.up.railway.app/all_entities
+  https://front-dev-test-b1on1kkk-api.up.railway.app/get-entity/all_entities
 ```
 
 Get list of matched points and the list of matched labels
 ```cmd
-  https://front-dev-test-b1on1kkk-api.up.railway.app/entity_filtered?x1=[value]&x2=[value]&y1=[value]&y2=[value]
+  https://front-dev-test-b1on1kkk-api.up.railway.app/get-entity/entity_filtered?x1=[value]&x2=[value]&y1=[value]&y2=[value]
 ```
+
+Get single entity by id
+```cmd
+  https://front-dev-test-b1on1kkk-api.up.railway.app/get-entity/entity/:[your_id]
+```
+
+### POST
+```cmd
+  https://front-dev-test-b1on1kkk-api.up.railway.app/create-entity
+```
+> [!CAUTION]
+> Body:
+> ```javascript
+>  data: {
+>    name: string,
+>    x_coordinate: number,
+>    y_coordinate: number,
+>    label: string
+>  };
+> ```
+
 
 
 ## Result
