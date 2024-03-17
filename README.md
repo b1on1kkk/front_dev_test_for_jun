@@ -2,6 +2,7 @@
 
 + [Thoughts && Additions](#Thoughts)
 + [Stack](#Stack)
++ [API](#API)
 + [How to build](#Result)
 
 
@@ -20,6 +21,21 @@ Secondly, is it ok if I used Prisma in this project? Hope this is not a big deal
 Frontend: ReactTS (Vite), Redux, react-router-dom, tailwind 
 
 Backend: Nest JS (TypeScript), PrismaORM (just easier to write queries), MySQL, 
+
+
+##API
+
+# GET
+
+Get list of ALL entities
+```cmd
+  https://front-dev-test-b1on1kkk-api.up.railway.app/all_entities
+```
+
+Get list of matched points and the list of matched labels
+```cmd
+  https://front-dev-test-b1on1kkk-api.up.railway.app/entity_filtered?x1=[value]&x2=[value]&y1=[value]&y2=[value]
+```
 
 
 ## Result
